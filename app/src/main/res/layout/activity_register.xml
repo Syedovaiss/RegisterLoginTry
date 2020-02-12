@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ovais.office.registerlogintry.viewmodel.RegisterViewModel" />
+
+        <variable
+            name="activity"
+            type="com.ovais.office.registerlogintry.views.RegisterActivity" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".views.RegisterActivity">
+
+
+        <!--        Icon-->
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:hint="@string/hintEmail"
+            android:inputType="textEmailAddress"
+            android:text="@={viewModel.email}"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/text_25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="248dp"
+            android:hint="@string/hintFullname"
+            android:inputType="textPersonName"
+            android:text="@={viewModel.name}"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/text_25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="@string/hintPassword"
+            android:inputType="textPassword"
+            android:text="@={viewModel.password}"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/text_25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="194dp"
+            android:layout_height="163dp"
+            android:layout_marginTop="35dp"
+            android:contentDescription="@string/register_image_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_person_outline_black_24dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="@dimen/height_120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/rounded_button"
+            android:onClick="@{()->viewModel.onRegister()}"
+            android:text="@string/registerButtonText"
+            android:textSize="@dimen/text_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/alreadyHaveAccount"
+            app:layout_constraintStart_toStartOf="@+id/alreadyHaveAccount"
+            app:layout_constraintTop_toBottomOf="@+id/password" />
+
+        <TextView
+            android:id="@+id/alreadyHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:text="@string/alreadyHaveAnAccount"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

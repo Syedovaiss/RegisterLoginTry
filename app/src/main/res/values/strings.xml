@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">RegisterLoginTry</string>
+    <string name="welcomeText">Welcome Back!</string>
+    <string name="hintUsername">Username</string>
+    <string name="hintFullname">Full name</string>
+    <string name="hintContact">Phone Number</string>
+    <string name="hintEmail">Email</string>
+    <string name="hintPassword">Password</string>
+    <string name="registerButtonText">Register</string>
+    <string name="register_image_description">Register Icon Image</string>
+    <string name="alreadyHaveAnAccount">Already have an account? Login</string>
+    <string name="LoginButtonText">Login</string>
+    <string name="DontHaveAnAccount">Don\'t Have An Account? Register</string>
+    <string name="Login_icon_image_description">Login Icon</string>
+</resources>
